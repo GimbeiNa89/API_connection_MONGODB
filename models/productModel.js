@@ -6,7 +6,7 @@ const productSchema = mongoose.Schema(
       type: String,
       required: [true, "Please enter a product name"]
     },
-    
+
     quantity: {
       type: Number,
       required: true,
@@ -21,9 +21,10 @@ const productSchema = mongoose.Schema(
       type: String,
       required: false,
      }
-    },
 
-     { timestamp: true }
+  },
+
+     { timestamps: true }
 
 );
 
