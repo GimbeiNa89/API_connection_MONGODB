@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.router = void 0;
+const express_1 = require("express");
+const contact_controller_1 = require("../controllers/contact.controller");
+// const dotenv = require("dotenv").config();
+exports.router = (0, express_1.Router)();
+exports.router.get("/", contact_controller_1.getContacts);
+exports.router.post("/", contact_controller_1.createContact);
+exports.router.delete("/:id", contact_controller_1.deleteContact);
+exports.router.patch("/:id", contact_controller_1.updateContact);
+exports.router.get("/:id", contact_controller_1.getContact);
